@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusLearn - Online Learning Platform</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> -->
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header & Navigation -->
+    <header class="gradient-bg shadow-xl sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    <span class="text-white text-2xl font-bold tracking-wider">NexusLearn</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-4">
+                    <button id="nav-home" class="text-white hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm font-medium transition duration-150 flex items-center space-x-1">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </button>
+                    <button id="nav-courses" class="text-white hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm font-medium transition duration-150 flex items-center space-x-1">
+                        <i class="fas fa-book-open"></i>
+                        <span>Courses</span>
+                    </button>
+                    <button id="nav-forum" class="text-white hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm font-medium transition duration-150 flex items-center space-x-1">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum</span>
+                    </button>
+                    <button id="nav-quizzes" class="text-white hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm font-medium transition duration-150 flex items-center space-x-1">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Quizzes</span>
+                    </button>
+                    <button id="nav-dashboard" class="text-white hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm font-medium transition duration-150 flex items-center space-x-1 hidden">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </button>
+                </nav>
+                
+                <div class="flex items-center space-x-3">
+                    <span id="user-display" class="text-white text-sm font-medium hidden md:inline"></span>
+                    <div class="relative hidden md:block">
+                        <i class="fas fa-bell text-white text-lg cursor-pointer hover:text-indigo-200"></i>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
+                    </div>
+                    <button id="auth-button" class="bg-white text-indigo-600 px-5 py-2 rounded-full text-sm font-semibold shadow-lg hover:bg-indigo-50 transition duration-150 flex items-center space-x-2">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Sign In</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-white text-xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-indigo-700 px-4 py-3 hidden">
+            <div class="flex flex-col space-y-3">
+                <button id="nav-home-mobile" class="text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 flex items-center space-x-2">
+                    <i class="fas fa-home w-5"></i>
+                    <span>Home</span>
+                </button>
+                <button id="nav-courses-mobile" class="text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 flex items-center space-x-2">
+                    <i class="fas fa-book-open w-5"></i>
+                    <span>Courses</span>
+                </button>
+                <button id="nav-dashboard-mobile" class="text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 flex items-center space-x-2">
+                    <i class="fas fa-chart-line w-5"></i>
+                    <span>Dashboard</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div id="content-area">
+            <!-- Content will be injected here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-6 mt-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-graduation-cap text-2xl text-indigo-400"></i>
+                        <span class="text-xl font-bold">NexusLearn</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Modern online learning platform for students and educators.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Features</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 flex items-center space-x-2">
+                            <i class="fas fa-video text-sm text-indigo-400"></i>
+                            <span>Video Lectures</span>
+                        </li>
+                        <li class="text-gray-400 flex items-center space-x-2">
+                            <i class="fas fa-comments text-sm text-indigo-400"></i>
+                            <span>Discussion Forums</span>
+                        </li>
+                        <li class="text-gray-400 flex items-center space-x-2">
+                            <i class="fas fa-chart-line text-sm text-indigo-400"></i>
+                            <span>Progress Tracking</span>
+                        </li>
+                        <li class="text-gray-400 flex items-center space-x-2">
+                            <i class="fas fa-tasks text-sm text-indigo-400"></i>
+                            <span>Assignments & Quizzes</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm mb-2">
+                        <i class="fas fa-envelope mr-2 text-indigo-400"></i>
+                        support@nexuslearn.edu
+                    </p>
+                    <p class="text-gray-400 text-sm mb-4">
+                        <i class="fas fa-phone mr-2 text-indigo-400"></i>
+                        (555) 123-4567
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 NexusLearn. COSC 369 Software Engineering Project. All rights reserved.</p>
+                <p class="mt-1">This is a demonstration project for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for messages -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div id="modal-content" class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 transform transition-all duration-300">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
+                <button id="modal-close" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <p id="modal-message" class="text-gray-600 mb-6"></p>
+            <button id="modal-action" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-150">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-xl max-w-4xl w-full overflow-hidden">
+            <div class="flex justify-between items-center p-4 bg-gray-800">
+                <h3 id="video-title" class="text-white text-xl font-bold">Video Lecture</h3>
+                <button id="video-close" class="text-white text-2xl hover:text-gray-300">&times;</button>
+            </div>
+            <div class="p-4">
+                <div class="bg-black aspect-video rounded-lg overflow-hidden flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-play-circle text-white text-7xl mb-4 opacity-75"></i>
+                        <p class="text-white text-lg">Video player simulation</p>
+                        <p class="text-gray-400 mt-2">In a real implementation, this would play actual course videos</p>
+                    </div>
+                </div>
+                <div class="mt-4 text-white">
+                    <h4 class="font-bold mb-2">About this lecture:</h4>
+                    <p id="video-description" class="text-gray-300"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nexuslearn-app.js" type="module"></script>
+<script>
+    // Initialize the app when the page loads
+    document.addEventListener('DOMContentLoaded', async function() {
+        await nexusLearn.initializeApp();
+    });
+</script>
+    
+</body>
+</html>
